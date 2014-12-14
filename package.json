@@ -1,0 +1,22 @@
+{
+  "name": "hipchat-exercise",
+  "version": "0.1.0",
+  "description": "Code exercise for Hipchat team.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Tommy Morgan <tommy@tommymorgan.com>",
+  "license": "ISC",
+  "dependencies": {
+    "flux": "^2.0.1",
+    "flux-dispatcher": "^1.0.5",
+    "jquery": "^2.1.1",
+    "microevent": "^1.0.0",
+    "q": "^1.1.2",
+    "react": "^0.12.1"
+  },
+  "devDependencies": {
+    "react-tools": "^0.12.1"
+  }
+}
