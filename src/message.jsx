@@ -7,7 +7,7 @@ var getEmoticonHtml = function() {
 	var id = 0;
 	return MessageStore.emoticons.map(function(emoticon) {
 		return (
-			<li key="emoticon-{ id++ }">{ emoticon }</li>
+			<li>{ emoticon }</li>
 		);
 	});
 };
@@ -15,7 +15,10 @@ var getEmoticonHtml = function() {
 var getLinkHtml = function() {
 	return MessageStore.links.map(function(link) {
 		return (
-			<li key="{ link.id }">Url: { link.url }, Title: { link.title }</li>
+			<li>
+				Url: { link.url },
+				Title: { link.title }
+			</li>
 		);
 	});
 };
@@ -23,7 +26,7 @@ var getLinkHtml = function() {
 var getMentionHtml = function() {
 	return MessageStore.mentions.map(function(mention) {
 		return (
-			<li key="{ mention.id }">{ mention }</li>
+			<li>{ mention }</li>
 		);
 	});
 };
@@ -39,26 +42,34 @@ var Message = React.createClass({
 		});
 	},
 	render: function() {
+		var textareaStyle = {
+			height: "300px",
+			width: "800px"
+		};
+
 		return (
 			<div>
 				<textarea
 					onInput={ this.parseTokens }
+					style={ textareaStyle }
 					></textarea>
 
-				<div>Version: { MessageStore.version }</div>
 				<div>
 					Emoticons:
 					<ul>
+						{ getEmoticonHtml() }
 					</ul>
 				</div>
 				<div>
 					Links:
 				</div>
 					<ul>
+						{ getLinkHtml() }
 					</ul>
 				<div>
 					Mentions:
 					<ul>
+						{ getMentionHtml() }
 					</ul>
 				</div>
 			</div>

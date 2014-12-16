@@ -2,19 +2,30 @@
   "name": "hipchat-exercise",
   "version": "0.1.0",
   "description": "Code exercise for Hipchat team.",
-  "main": "index.js",
+  "private": true,
   "scripts": {
+    "start": "node ./bin/www",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Tommy Morgan <tommy@tommymorgan.com>",
   "license": "ISC",
   "dependencies": {
+    "body-parser": "~1.8.1",
+    "cookie-parser": "~1.3.3",
+    "debug": "~2.0.0",
+    "express": "~4.9.0",
     "flux": "^2.0.1",
     "flux-dispatcher": "^1.0.5",
+    "hbs": "~2.7.0",
     "jquery": "^2.1.1",
+    "jsdom": "^1.5.0",
+    "lodash": "^2.4.1",
     "microevent": "^1.0.0",
+    "morgan": "~1.3.0",
+    "react": "^0.12.1",
+    "request": "^2.51.0",
     "q": "^1.1.2",
-    "react": "^0.12.1"
+    "serve-favicon": "~2.1.3"
   },
   "devDependencies": {
     "react-tools": "^0.12.1"

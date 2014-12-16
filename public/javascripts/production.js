@@ -36240,7 +36240,8 @@ Dispatcher.register(function(payload) {
 					type: "get",
 					url: "http://localhost:3000/url/title"
 				}).done(function(data) {
-					debugger;
+					link.title = data;
+					MessageStore.trigger("change");
 				});
 			});
 
