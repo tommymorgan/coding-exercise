@@ -10,6 +10,10 @@ router.get('/title', function(req, res) {
 		return;
 	}
 
+	if (req.query.url.indexOf("http") === -1) {
+		req.query.url = "http://" + req.query.url;
+	}
+
 	request(req.query.url, function(error, response, body) {
 		if (!error && response.statusCode === 200) {
 			jsdom.env(body, ["http://code.jquery.com/jquery.js"], function(errors, window) {
